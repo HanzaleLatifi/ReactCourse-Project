@@ -1,13 +1,13 @@
 import React from 'react'
 
-function Todo({ text, id, isComplete }) {
+function Todo({ todo, completeHandler, removeHandler }) {
     return (
-        <div className='todo'>
-            <div>
-                {text}
+        <div className="todo" >
+            <div onClick={completeHandler} className={todo.isComplete ? 'complete' : ''}>
+                {todo.text}
             </div>
             <div>
-                <button>remove</button>
+                <button onClick={removeHandler} >remove</button>
                 <button>edit</button>
             </div>
 
