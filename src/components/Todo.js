@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Todo({ todo, completeHandler, removeHandler }) {
+function Todo({ todo, completeHandler, removeHandler, editHandler }) {
     return (
         <div className="todo" >
             <div onClick={completeHandler} className={todo.isComplete ? 'complete' : ''}>
@@ -8,7 +8,7 @@ function Todo({ todo, completeHandler, removeHandler }) {
             </div>
             <div>
                 <button onClick={removeHandler} >remove</button>
-                <button>edit</button>
+                <button onClick={editHandler} >edit</button>
             </div>
 
 

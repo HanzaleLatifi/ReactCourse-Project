@@ -26,10 +26,21 @@ function TodoApp() {
         setTodos(filter);
 
     }
+    const updateTodo = (id, newValue) => {
+        const index = todos.findIndex(t => t.id === id);
+        const newTodo = { ...todos[index] };
+        newTodo.text = newValue;
+        const updatedTodos = [...todos];
+        updatedTodos[index] = newTodo;
+        setTodos(updatedTodos);
+
+
+
+    }
     return (
         <div className="App">
             <TodoForm inputHandler={addTodoHandler} />
-            <TodoList todos={todos} completeHandlerr={completeHandler} removeHandlerr={removeHandler} />
+            <TodoList todos={todos} completeHandlerr={completeHandler} removeHandlerr={removeHandler} updateHandler={updateTodo} />
 
 
         </div>

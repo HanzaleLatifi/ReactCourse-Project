@@ -27,3 +27,13 @@
   text-decoration: line-through;
   opacity: 0.7;
 }
+.btn {
+  padding: 0 1rem;
+  color: white;
+}
+.updateBtn {
+  background-color: rgb(100, 167, 0);
+}
+.addBtn {
+  background-color: blueviolet;
+}
