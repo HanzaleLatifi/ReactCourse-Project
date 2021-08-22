@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import Navbar from './Navbar';
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 
 function TodoApp() {
     const [todos, setTodos] = useState([]);
+    const [filterTodo, setFilterTodo] = useState([]);
 
 
     const completeHandler = (todo) => {
@@ -37,8 +39,30 @@ function TodoApp() {
 
 
     }
+    const selectHandler = (select) => {
+
+        switch (select) {
+            // case 'all':
+            //     setFilterTodo(todos);
+            //     break;
+            case 'complete':
+                setFilterTodo(todos.filter(t => t.isComplete));
+                break;
+
+            case 'unComplete':
+                setFilterTodo(todos.filter(t => !t.isComplete));
+                break;
+
+            default: setFilterTodo(todos);
+
+
+
+        }
+    }
+
     return (
         <div className="App">
+            <Navbar todos={todos} selectHandler={selectHandler} unCompleteTodos={todos.filter(todo => !todo.isComplete)} />
             <TodoForm inputHandler={addTodoHandler} />
             <TodoList todos={todos} completeHandlerr={completeHandler} removeHandlerr={removeHandler} updateHandler={updateTodo} />
 
