@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-function Navbar({ selectHandler, unCompleteTodos }) {
+function Navbar({ selectHandler, unCompleteTodos, status, setStatus }) {
 
-    const [status, setStatus] = useState('all');
+
 
     const onSelect = (e) => {
         setStatus(e.target.value)
