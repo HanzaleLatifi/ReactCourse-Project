@@ -1,12 +1,12 @@
 import './App.css';
-import TodoApp from './components/TodoApp';
+import ExpenseApp from './components/ExpenseApp';
 
 function App() {
   return (
-    <div className="container">
-      <TodoApp />
+    <>
+      <ExpenseApp/>
 
-    </div>
+    </>
   );
 }
 

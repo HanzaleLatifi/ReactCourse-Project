@@ -1,49 +1,40 @@
-.container {
-  display: flex;
-  justify-content: center;
+.app{
   min-height: 100vh;
-  background-color: lightgrey;
-}
-.App {
-  padding-top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 4rem 0;
   width: 100%;
-  background-color: white;
+
 }
-.todo {
-  min-width: 40rem;
-  margin: 0.4rem 0;
+.viewContainer{
+  min-width: 25%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: blueviolet;
-  color: white;
-  font-size: 1.6rem;
-}
-.complete {
-  text-decoration: line-through;
-  opacity: 0.7;
-}
-.btn {
-  padding: 0 1rem;
-  color: white;
-}
-.updateBtn {
-  background-color: rgb(100, 167, 0);
-}
-.addBtn {
-  background-color: blueviolet;
-}
-header {
-  background-color: pink;
-  width: 70%;
-  margin: 2rem auto;
+  flex-direction: column;
   padding: 1rem;
-  font-size: 1.5rem;
+  background-color: slateblue;
+  color: white;
+  
+}
+.topView{
   display: flex;
+  padding: 1rem;
   justify-content: space-between;
   align-items: center;
+  font-size: 2rem;
+
+}
+.resultView{
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+
+}
+.formContainer{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
 }
