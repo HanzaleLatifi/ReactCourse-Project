@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Transaction() {
+function Transaction({transaction}) {
     return (
-        <div>
-            Transaction ...!
+        <div className='transaction'>
+            {transaction.map(t=>{
+              return  <div key={t.id} style={{borderRight:t.type==='expense'&&'1px solid red'}} >{t.desc} </div>
+            })}
+           
             
         </div>
     )

@@ -38,3 +38,9 @@
   flex-direction: column;
 
 }
+.transaction{
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  background-color: darkgrey;
+  width: 12rem;
+}
