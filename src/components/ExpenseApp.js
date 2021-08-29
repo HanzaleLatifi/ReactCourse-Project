@@ -15,7 +15,9 @@ function ExpenseApp() {
        setExpense(exp);
        setIncome(inc);
        
-    }, [transaction])
+    }, [transaction]);
+
+    
 
     const addTransaction=(formValues)=>{
         
@@ -23,12 +25,13 @@ function ExpenseApp() {
         setTransaction([...transaction , newObj])
 
     }
+  
 
     return (
         <div className='app'>
             <header><h1>Expense App</h1></header>
             <OverView expense={expense} income={income} addTransaction={addTransaction}  />
-            <Transaction transaction={transaction}/>
+            <Transaction transaction={transaction} />
         
         </div>
     )
